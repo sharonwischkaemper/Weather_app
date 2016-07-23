@@ -13,9 +13,31 @@
 
 <body>
 
-    <div ng-controller="MainController as m">
-     {{m.location.city}}
+    <div class="container-fluid" ng-controller="MainController as m">
+        <div class="page-header">
+            <a href="https://github.com/sharonwischkaemper">
+                <img src="https://asanablog-wpengine.netdna-ssl.com/wp-content/post-images/GitHub-Mark-64px.png">
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 "></div>
+            <div class="col-xs-4 ">
+                <h1 id="weatherHeader">Weather App</h1>
+                <h2>{{m.location.city}}, {{m.location.state}}</h2>
+                <h2>{{m.forecast.simpleforecast.forecastday[0].high[m.temp]}}<button ng-click="m.toggleTemp()">&deg;{{m.tempSymbol}}</button></h2>
+                <h4>{{m.forecast.simpleforecast.forecastday[1].conditions}}</h4>
+            </div>
+            <div class="col-xs-4"></div>
+
+        </div>
+
     </div>
+    
+
+
+
+
+
 
 
 
@@ -31,4 +53,5 @@
 
 
 </body>
+
 </html>

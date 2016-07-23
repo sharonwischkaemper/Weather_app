@@ -1,0 +1,25 @@
+#weatherHeader{
+font-size: 85px;
+font-family: "Lucida Bright", Georgia, serif;
+}
+
+h2{
+text-align: center;
+font-family: "Lucida Bright", Georgia, serif;
+
+}
+
+h4{
+text-align: center;
+font-family: "Lucida Bright", Georgia, serif;
+
+}
+
+body{
+   background-color: #CFFACF;
+}
+
+#imgLink{
+    text-align: center;
+}
+
