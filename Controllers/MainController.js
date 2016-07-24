@@ -12,16 +12,16 @@ function MainController(locationFactory, forcastFactory, $http) {
         vm.location = data.location;
         vm.city = data.location.city;
         vm.state = data.location.state;
-   
-    forcastFactory.getForcast(data.location.city,data.location.state).then(function (data) {
-        vm.forecast = data.forecast;
-        vm.celsius = data.forecast.simpleforecast.forecastday[3].high.celsius;
-        vm.currentDegrees = fahrenheit;
+
+        forcastFactory.getForcast(data.location.city, data.location.state).then(function (data) {
+            vm.forecast = data.forecast;
+            vm.celsius = data.forecast.simpleforecast.forecastday[3].high.celsius;
+            vm.currentDegrees = fahrenheit;
+        })
     })
- })
 
 
-   
+
 
     vm.temp = 'fahrenheit';
     vm.tempSymbol = 'C';
