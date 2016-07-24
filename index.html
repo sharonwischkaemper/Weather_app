@@ -23,7 +23,7 @@
             <div class="col-xs-4 "></div>
             <div class="col-xs-4 ">
                 <h1 id="weatherHeader">Weather App</h1>
-                <h2>{{m.location.city}}, {{m.location.state}}</h2>
+                <h2>{{m.city}},{{m.state}}</h2>
                 <h2>{{m.forecast.simpleforecast.forecastday[0].high[m.temp]}}<button ng-click="m.toggleTemp()">&deg;{{m.tempSymbol}}</button></h2>
                 <h4>{{m.forecast.simpleforecast.forecastday[1].conditions}}</h4>
             </div>

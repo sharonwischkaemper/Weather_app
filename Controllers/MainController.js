@@ -10,15 +10,18 @@ function MainController(locationFactory, forcastFactory, $http) {
 
     locationFactory.getLocation().then(function (data) {
         vm.location = data.location;
-    
-    })
-
-
-    forcastFactory.getForcast().then(function (data) {
+        vm.city = data.location.city;
+        vm.state = data.location.state;
+   
+    forcastFactory.getForcast(data.location.city,data.location.state).then(function (data) {
         vm.forecast = data.forecast;
         vm.celsius = data.forecast.simpleforecast.forecastday[3].high.celsius;
         vm.currentDegrees = fahrenheit;
     })
+ })
+
+
+   
 
     vm.temp = 'fahrenheit';
     vm.tempSymbol = 'C';
